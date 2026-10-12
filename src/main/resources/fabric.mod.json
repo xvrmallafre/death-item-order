@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "death_item_order",
+  "version": "${version}",
+  "name": "Death Item Order",
+  "description": "Returns physically recovered death drops to their original inventory slots.",
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["death-item-order.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25"
+  }
+}
