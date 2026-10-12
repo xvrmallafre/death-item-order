@@ -12,7 +12,9 @@ Este proyecto fija Minecraft 26.3, Loader 0.19.5, Loom 1.17.1 y Gradle 9.6.0. El
 
 ## Compilación
 
-Instala un **JDK 25**, configura `JAVA_HOME` y comprueba que `java -version` muestra 25. El wrapper incluido descarga Gradle; la primera compilación necesita acceso a Internet para las dependencias. No necesitas instalar Gradle por separado.
+Para iniciar Gradle utiliza un **JDK 21 o posterior**, con `JAVA_HOME` apuntando a esa instalación. El proyecto utiliza un JDK 25 para compilar y ejecutar las pruebas: si no hay uno instalado, el resolver Foojay lo descarga automáticamente a la caché de Gradle. El wrapper incluido descarga Gradle; la primera compilación necesita acceso a Internet para Gradle, el JDK y las dependencias. No necesitas instalar Gradle por separado.
+
+En WSL, `JAVA_HOME` debe apuntar a un JDK de Linux dentro de WSL; una instalación de Java en Windows no se detecta automáticamente como un JDK de Linux. Si aparece `Cannot find a Java installation ... languageVersion=25`, actualiza el repositorio y vuelve a compilar para utilizar el resolver incluido. El JDK descargado para compilar no cambia el Java del sistema: Minecraft y el servidor siguen necesitando Java 25 para ejecutarse.
 
 En Windows, desde PowerShell en la carpeta del proyecto:
 
